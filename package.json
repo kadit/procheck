@@ -1,0 +1,23 @@
+{
+  "name": "pro-check",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "devDependencies": {
+    "electron-prebuilt": "^0.35.2"
+  },
+  "scripts": {
+    "start": "electron main.js"
+  },
+  "author": "Aditya",
+  "dependencies": {
+    "d3": "^3.5.17",
+    "electron-notifications": "^0.1.5",
+    "electron-notify": "^0.1.0",
+    "growl": "^1.9.2",
+    "jsdom": "^9.12.0",
+    "node-notifier": "^5.0.2",
+    "notifyjs": "^3.0.0",
+    "underscore": "^1.8.3"
+  }
+}
