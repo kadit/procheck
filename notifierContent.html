@@ -4,6 +4,12 @@
     	<link rel="stylesheet" href="./css/proStyles.css">
 	</head>
 	<body class="notificationBody">
+		  <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                  <span id="closeNotWindow" class="pull-right"><img style="width: 20px;height: 22px;" src="./img/close.png"/></span>
+              </div>
+              
+          </div>
 		 <div class="row firstDivAlign subPageHeading">
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                       Thought of the moment!
@@ -25,6 +31,11 @@
 	<script src = './lib/jquery/jquery.js'></script>
 	<script>
 		$(function(){
+			var remote = require('electron').remote;
+			$("#closeNotWindow").click(function(event){
+				event.preventDefault();
+    			remote.getCurrentWindow().hide();
+			});
 			
 			var c = window.localStorage.getItem("notificationIndex");
 			var inspMsgs = JSON.parse(window.localStorage.getItem("inspArr"));
@@ -39,7 +50,7 @@
 			
 		});
 	</script>
-	<script>
+	<!-- <script>
 	  document.addEventListener("keydown", function (e) {
 	    if (e.which === 123) {
 	      require('remote').getCurrentWindow().toggleDevTools();
@@ -47,5 +58,5 @@
 	      location.reload();
 	    }
 	  });
-	</script>
+	</script> -->
 </html>

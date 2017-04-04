@@ -217,7 +217,7 @@ $(function(){
 
 			var BrowserWindow = remote.BrowserWindow;
 			var notifierWindow = new BrowserWindow({
-			 x:1100, 
+			 x:700, 
 			 y:500,
 			 width: 800, 
 			 height: 200,
